@@ -1,0 +1,605 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  /*para definir, ya que viene prederteminado*/
+  padding: 0;
+  box-sizing: border-box; }
+
+.portada {
+  background: black; }
+
+.jumbotron {
+  font-family: 'Montserrat', sans-serif;
+  padding: 210px 0;
+  background: url(https://unsplash.it/1500/500?image=1059) center center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  position: relative; }
+  .jumbotron h1 {
+    font-size: 70px;
+    margin-bottom: 0; }
+  .jumbotron p {
+    font-family: serif;
+    font-size: 30px;
+    font-style: italic;
+    margin: 0 0 30px; }
+
+.button {
+  display: inline-block;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s; }
+  .button :hover {
+    background: #fff;
+    color: #000; }
+
+/*//// Icono flotante de contacto WHATSAPP*/
+.float {
+  position: fixed;
+  /*posición fija en la página, se arrastrara*/
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  /*se sobrepondrá*/ }
+  .float :hover {
+    background-color: white;
+    text-decoration: none;
+    color: #000000; }
+
+.my-float {
+  margin-top: 16px; }
+
+/*ICONO FLOTANTE EDITADO, INSTAGRAM arreglar*/
+.instagram {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 110px;
+  right: 40px;
+  background-image: url("/imagenes/iconoig7.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 200; }
+  .instagram :hover {
+    background-image: url("/imagenes/iconoiginver.jpg");
+    background-size: 90%; }
+
+/* MAIN MENU START*/
+.btn {
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  overflow: hidden;
+  transition: all 500ms ease;
+  margin-bottom: 20px;
+  z-index: 5;
+  font-weight: 700;
+  cursor: pointer; }
+  .btn ::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    background-color: #3c3c3c;
+    transition: all 500ms ease;
+    z-index: -1; }
+
+.btn--1 ::before {
+  width: 0;
+  height: 100%; }
+
+.btn--1 :hover {
+  color: #434343; }
+
+.btn--1 :hover::before {
+  width: 100%; }
+
+.btn--1 :hover {
+  color: #434343; }
+
+.btn--1 :hover::before {
+  width: 100%; }
+
+[data-target="#mainMenu"] {
+  position: relative;
+  z-index: 999; }
+
+.fuenteCatalogo {
+  font-family: 'Cormorant Garamond', serif; }
+
+h3 {
+  font-family: "Oswald"; }
+
+#mainMenu li > a {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: white;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  text-decoration: none; }
+
+#mainMenu li:not(:last-of-type) {
+  margin-right: 30px; }
+
+#mainMenu li > a ::before {
+  position: absolute;
+  content: "";
+  width: calc(100% - 1px);
+  height: 1px;
+  background: white;
+  bottom: -6px;
+  left: 0;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
+  z-index: -1;
+  -webkit-transition: transform 0.5s ease;
+  transition: transform 0.5s ease; }
+
+#mainMenu li > a:hover::before,
+#mainMenu li > a.active::before {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center; }
+
+.main-header {
+  position: fixed;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  .main-header .fixed-nav #mainMenu li > a {
+    color: white;
+    text-decoration: none; }
+  .main-header .fixed-nav #mainMenu li > a::before {
+    background: white; }
+  .main-header .fixed-nav {
+    top: 0;
+    background: white;
+    -webkit-box-shadow: 0 8px 12px -8px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 8px 12px -8px rgba(0, 0, 0, 0.09);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+  .main-header .fixed-nav .navbar-brand > img:last-of-type {
+    display: block; }
+  .main-header .fixed-nav .navbar-brand > img:first-of-type {
+    display: none; }
+  .main-header .navbar-brand img {
+    max-width: 40px;
+    animation: fadeInLeft 0.4s both 0.4s; }
+
+.navbar-brand {
+  color: white;
+  font-family: "Oswald"; }
+
+/* main-header end */
+@media (max-width: 991px) {
+  /*header starts*/
+  #mainMenu li:not(:last-of-type) {
+    margin-right: 0px; }
+  .main-header .navbar {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center; }
+  .main-header .navbar-nav {
+    margin-top: 70px; }
+  .main-header .navbar-nav li .nav-link {
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 0px; }
+  .main-header .navbar-toggler .icon-bar {
+    background-color: white;
+    margin: 0 auto 6px;
+    border-radius: 0;
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    right: 0;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  .main-header .navbar .navbar-toggler .icon-bar:first-child {
+    margin-top: 3px; }
+  .main-header .navbar-toggler .icon-bar-1 {
+    width: 10px;
+    top: 0px; }
+  .main-header .navbar-toggler .icon-bar-2 {
+    width: 16px;
+    top: 12px; }
+  .main-header .navbar-toggler .icon-bar-3 {
+    width: 20px;
+    top: 21px; }
+  .main-header .current .icon-bar {
+    margin-bottom: 5px;
+    border-radius: 0;
+    display: block; }
+  .main-header .current .icon-bar-1 {
+    width: 18px; }
+  .main-header .current .icon-bar-2 {
+    width: 30px; }
+  .main-header .current .icon-bar-3 {
+    width: 10px; }
+  .main-header .navbar-toggler:hover .icon-bar {
+    background-color: white;
+    /*el del icono menu al tocarlos en celular*/ }
+  .main-header .navbar-toggler:focus .icon-bar {
+    background-color: white; }
+  .collapse.in {
+    display: block !important;
+    padding: 0;
+    clear: both; }
+  .navbar-toggler {
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    border: none;
+    border-radius: 0;
+    outline: none !important; }
+  /*header ends*/ }
+
+.carousel-item {
+  height: 100vh;
+  width: auto; }
+
+/*SECCIONES DEL INDEX*/
+.ventana {
+  margin: 24px 0px;
+  color: #000000; }
+
+/*//FOOTER//*/
+.container-fluid {
+  overflow: hidden;
+  margin-top: 30px;
+  /*margen del footer modificar*/
+  background: #000000;
+  /*fondo del footer*/
+  color: #ffffff !important;
+  /*colores de ls letra*/
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
+.text-muted1 {
+  color: #ffffff !important; }
+
+.a1 {
+  color: white; }
+
+small {
+  font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important; }
+
+.bold-text {
+  color: #ffffff !important; }
+
+.mt-55 {
+  margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important; }
+
+h3 {
+  font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important; }
+
+.social {
+  font-size: 21px !important; }
+
+.rights {
+  font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important; }
+
+h1 {
+  font-family: 'Xanh Mono', monospace; }
+
+.linea {
+  border-top: 5px solid #000000;
+  /*Linea de presentación*/
+  margin-bottom: 40px;
+  /*Espacio entre abajo de la linea de presentacion.*/ }
+
+/*
+* @subsection Shop/////////////////////////////////////////////////LENCERIA////////////////////////////////////////////////////////////////////////
+*/
+.product {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto; }
+  .product .caption {
+    margin-top: 15px; }
+  .product .caption h6 {
+    color: #7493a2; }
+  .product .caption .price + .price {
+    margin-left: 15px; }
+  .product .tumbnail {
+    box-shadow: 0 5px 25px 0 transparent;
+    transition: 0.3s linear;
+    padding-top: 0; }
+  .product .tumbnail img:hover {
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2); }
+
+.single-product span {
+  display: inline-block; }
+
+.single-product .rating .fa-star, .single-product .single-product .rating .fa-star-o {
+  font-size: 16px;
+  color: #f7d4a0;
+  margin-left: 2px; }
+
+.single-product .rating + * {
+  margin-left: 15px; }
+
+.single-product h1.h1-variant-2 {
+  margin-bottom: 20px; }
+
+.single-product .caption:before {
+  content: '';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle; }
+
+.single-product .caption span {
+  display: inline-block;
+  vertical-align: middle; }
+
+.single-product .caption .price {
+  font-weight: 400; }
+
+.single-product .caption .price.sale {
+  color: #e75854;
+  font-size: 33px; }
+
+.single-product .caption * + .price {
+  margin-left: 10.8%; }
+
+@media (max-width: 1199px) {
+  .single-product .caption * + .price {
+    margin-left: 7.8%; }
+  .single-product .caption .caption * + .quantity {
+    margin-left: 26px; }
+  .single-product .caption .info-list {
+    border-bottom: 1px solid #f3f3ed;
+    border-top: 1px solid #f3f3ed;
+    font-family: Montserrat, sans-serif;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    text-align: left; }
+  .single-product .caption .info-list dt, .single-product .caption .single-product .caption .info-list dd {
+    display: inline-block;
+    line-height: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .single-product .caption .info-list dt {
+    letter-spacing: 0.08em;
+    font-size: 12px;
+    color: #a7b0b4;
+    width: 35%;
+    text-transform: uppercase; }
+  .single-product .caption .info-list dd {
+    font-size: 15px;
+    color: #565452;
+    width: 62.5%; }
+  .single-product .caption .share span.small {
+    margin-top: 9px; } }
+
+@media (max-width: 991px) {
+  .single-product .caption .share span.small {
+    display: block;
+    margin-bottom: 15px; } }
+
+@media (max-width: 767px) {
+  .product {
+    margin-left: 70px; }
+  .single-product .table-mobile tr {
+    padding-top: 0; }
+  .single-product .table-mobile tr:before {
+    display: none; } }
+
+@media (max-width: 490px) {
+  .product {
+    margin-left: 50px; } }
+
+.price {
+  display: inline-block;
+  font-size: 15px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #2b2f3e; }
+  .price .sale {
+    color: #e75854; }
+  .price del {
+    color: #b0bec5; }
+
+.quantity {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  background: #eceff1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 82px;
+  height: auto;
+  display: inline-block; }
+  .quantity span {
+    display: inline-block; }
+  .quantity .num {
+    width: 26px; }
+  .quantity [class*='fa-'] {
+    padding-top: 4px;
+    width: 22px;
+    padding-bottom: 4px;
+    color: #b0bec5;
+    cursor: pointer; }
+  .quantity [class*='fa-']:hover {
+    color: #455a64; }
+
+/*/////////////////////////////////// INDEX: Contacto/////////////////////////////////////////////////////////////*/
+/*////////////////////////////////// INDEX: Contacto/////////////////////////////////////////////////////////////*/
+.section4 {
+  background-color: rgba(245, 245, 245, 0.857); }
+  .section4 h6 {
+    font-family: 'Cormorant Garamond', serif;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: black;
+    margin-left: 4%;
+    margin-top: 7%;
+    /*espacio de arriba*/
+    margin-bottom: 2%;
+    /*espacio de abajo*/
+    font-size: 350%; }
+
+.inicio-4 {
+  /*ES LA CAJA*/
+  display: block;
+  margin: 10px 20px 10px 10px;
+  text-align: none;
+  font-size: 18px;
+  color: black;
+  letter-spacing: 2px;
+  text-align: right; }
+  .inicio-4 a {
+    color: black; }
+  .inicio-4 a:hover {
+    opacity: .3;
+    transition: 1s;
+    text-decoration: none; }
+
+.inicio-4 {
+  /*ES LA CAJA*/
+  display: block;
+  margin: 10px 20px 10px 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  letter-spacing: 2px;
+  text-align: right; }
+  .inicio-4 a {
+    text-decoration: none;
+    color: black; }
+  .inicio-4 a:hover {
+    opacity: .3;
+    transition: 1s; }
+
+@media (max-width: 850px) {
+  .section4 h6 {
+    margin-top: 13%; } }
+
+#contact {
+  background-color: #f1f1f1;
+  font-family: 'Roboto', sans-serif; }
+  #contact .well {
+    margin-top: 30px;
+    border-radius: 0; }
+  #contact .form-control {
+    border-radius: 0;
+    border: 2px solid #1e1e1e; }
+  #contact button {
+    border-radius: 0;
+    border: 2px solid #1e1e1e; }
+  #contact .row {
+    margin-bottom: 30px; }
+
+@media (max-width: 768px) {
+  #contact iframe {
+    margin-bottom: 15px; } }
+
+/*/////////////////////////////////// INDEX: MUSCULOSAS REDUCTORAS /////////////////////////////////////////////////////////////*/
+/*////////////////////////////////// INDEX: MUSCULOSAS REDUCTORAS/////////////////////////////////////////////////////////////*/
+.galeria h1 {
+  text-align: center;
+  margin: 50px 0 25px 0;
+  font-weight: 300; }
+
+.contenedor-imagenes {
+  display: flex;
+  /*ACTIVAMOS EL FLEX*/
+  width: 70%;
+  margin: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 3px; }
+  .contenedor-imagenes .imagen {
+    width: 32%;
+    position: relative;
+    height: 250px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75); }
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.imagen h1 {
+  font-size: 20px; }
+
+.imagen :hover .overlay {
+  height: 100%;
+  cursor: pointer; }
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.781);
+  /*COLOR CON EL QUE AL PASAR EL CURSO, SALDRÁ*/
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: .5s ease; }
+  .overlay h2 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%); }
+
+@media screen and (max-width: 1000px) {
+  .contenedor-imagenes {
+    width: 95%; } }
+
+@media screen and (max-width: 700px) {
+  .contenedor-imagenes {
+    width: 90%; }
+  .contenedor-imagenes .imagen {
+    width: 48%; } }
+
+@media screen and (max-width: 350px) {
+  h1 {
+    font-size: 11px; }
+  .contenedor-imagenes {
+    width: 98%; }
+  .contenedor-imagenes .imagen {
+    width: 80%; } }

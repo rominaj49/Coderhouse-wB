@@ -32,7 +32,7 @@
   color: #fff;
   text-decoration: none;
   transition: 0.3s; }
-  .button :hover {
+  .button:hover {
     background: #fff;
     color: #000; }
 
@@ -52,7 +52,7 @@
   box-shadow: 2px 2px 3px #999;
   z-index: 100;
   /*se sobrepondrá*/ }
-  .float :hover {
+  .float:hover {
     background-color: white;
     text-decoration: none;
     color: #000000; }
@@ -75,7 +75,7 @@
   font-size: 30px;
   box-shadow: 2px 2px 3px #999;
   z-index: 200; }
-  .instagram :hover {
+  .instagram:hover {
     background-image: url("/imagenes/iconoiginver.jpg");
     background-size: 90%; }
 
@@ -92,7 +92,7 @@
   z-index: 5;
   font-weight: 700;
   cursor: pointer; }
-  .btn ::before {
+  .btn::before {
     content: "";
     position: absolute;
     left: 0;
@@ -103,20 +103,20 @@
     transition: all 500ms ease;
     z-index: -1; }
 
-.btn--1 ::before {
+.btn--1::before {
   width: 0;
   height: 100%; }
 
-.btn--1 :hover {
+.btn--1:hover {
   color: #434343; }
 
-.btn--1 :hover::before {
+.btn--1:hover::before {
   width: 100%; }
 
-.btn--1 :hover {
+.btn--1:hover {
   color: #434343; }
 
-.btn--1 :hover::before {
+.btn--1:hover::before {
   width: 100%; }
 
 [data-target="#mainMenu"] {

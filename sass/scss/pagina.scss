@@ -10,7 +10,7 @@ background: rgb(0, 0, 0);
 .jumbotron{
   font-family: 'Montserrat', sans-serif;
   padding: 210px 0;
-  background: url(https://unsplash.it/1500/500?image=1059) center center;
+  background: url(../../imagenes/portada.jpg) center center;
   background-size: cover;
   text-align: center;
   color: #fff;
@@ -28,14 +28,14 @@ h1 {
 }
 }
 
-.button{
+.button {
   display: inline-block;
   border: 2px solid #fff;
   padding: 10px 20px;
   color: #fff;
   text-decoration: none;
   transition: 0.3s;
-:hover{
+&:hover{
   background: #fff;
   color: #000;
 }
@@ -55,7 +55,7 @@ h1 {
 	box-shadow: 2px 2px 3px #999;
   z-index:100; /*se sobrepondrá*/
 
-:hover{
+&:hover{
     background-color: white;
 text-decoration: none;
     color: #000000;
@@ -74,7 +74,7 @@ text-decoration: none;
     height:60px;
     bottom:110px;
     right:40px;
-    background-image: url("/imagenes/iconoig7.jpg");
+    background: url(../../imagenes/iconoig7.jpg) center center;
     background-size: cover;
     background-position: center;
     border-radius:50px;
@@ -82,15 +82,17 @@ text-decoration: none;
     font-size:30px;
     box-shadow: 2px 2px 3px #999;
     z-index:200;
-:hover{
-    background-image: url("/imagenes/iconoiginver.jpg");
+&:hover{
+    background: url(../../imagenes/iconoiginver.jpg) center center;
     background-size: 90%;
   }
 }
 
-
+.colormenu{
+  background-color: black;
+}
 /* MAIN MENU START*//////////////////////////////////////////////////////////////////////////////////
-.btn {
+.btn{
   border-radius: 4px;
   text-transform: uppercase;
   background-color: transparent;
@@ -103,7 +105,7 @@ text-decoration: none;
   font-weight: 700;
   cursor: pointer;
 
-::before{
+&::before{
     content: "";
     position: absolute;
     left: 0;
@@ -116,28 +118,23 @@ text-decoration: none;
   }
 }
 .btn--1{
-::before {
+&::before{
     width: 0;
     height: 100%;
   }
-:hover {
+:hover{
     color: #434343;
   }
-:hover::before {
+&:hover::before{
     width: 100%;
   }
-:hover {
+&:hover {
     color: #434343;
   }
-:hover::before {
+&:hover::before{
     width: 100%;
   }
 }
-
-
-
-
-
 
 
 [data-target="#mainMenu"] {
@@ -164,38 +161,11 @@ h3{
     }
 
   li:not(:last-of-type) {
-        margin-right: 30px;
+        margin-right: 10px;
     }
-
-  li > a ::before{
-  position: absolute;
-  content: "";
-  width: calc(100% - 1px);
-  height: 1px;
-  background: rgb(255, 255, 255);
-  bottom: -6px;
-  left: 0;
-
-  -webkit-transform: scale(0, 1);
-  -ms-transform: scale(0, 1);
-  transform: scale(0, 1);
-  -webkit-transform-origin: right center;
-  -ms-transform-origin: right center;
-  transform-origin: right center;
-  z-index: -1;
 
   -webkit-transition: transform 0.5s ease;
   transition: transform 0.5s ease;
-}
-  li > a:hover::before,
-  li > a.active::before {
-  -webkit-transform: scale(1, 1);
-  -ms-transform: scale(1, 1);
-  transform: scale(1, 1);
-  -webkit-transform-origin: left center;
-  -ms-transform-origin: left center;
-  transform-origin: left center;
-}
 }
 
 .main-header{

@@ -11,7 +11,7 @@
 .jumbotron {
   font-family: 'Montserrat', sans-serif;
   padding: 210px 0;
-  background: url(https://unsplash.it/1500/500?image=1059) center center;
+  background: url(../../imagenes/portada.jpg) center center;
   background-size: cover;
   text-align: center;
   color: #fff;
@@ -67,7 +67,7 @@
   height: 60px;
   bottom: 110px;
   right: 40px;
-  background-image: url("/imagenes/iconoig7.jpg");
+  background: url(../../imagenes/iconoig7.jpg) center center;
   background-size: cover;
   background-position: center;
   border-radius: 50px;
@@ -76,8 +76,11 @@
   box-shadow: 2px 2px 3px #999;
   z-index: 200; }
   .instagram:hover {
-    background-image: url("/imagenes/iconoiginver.jpg");
+    background: url(../../imagenes/iconoiginver.jpg) center center;
     background-size: 90%; }
+
+.colormenu {
+  background-color: black; }
 
 /* MAIN MENU START*/
 .btn {
@@ -107,7 +110,7 @@
   width: 0;
   height: 100%; }
 
-.btn--1:hover {
+.btn--1 :hover {
   color: #434343; }
 
 .btn--1:hover::before {
@@ -129,44 +132,19 @@
 h3 {
   font-family: "Oswald"; }
 
-#mainMenu li > a {
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: white;
-  font-weight: 400;
-  position: relative;
-  z-index: 1;
-  text-decoration: none; }
-
-#mainMenu li:not(:last-of-type) {
-  margin-right: 30px; }
-
-#mainMenu li > a ::before {
-  position: absolute;
-  content: "";
-  width: calc(100% - 1px);
-  height: 1px;
-  background: white;
-  bottom: -6px;
-  left: 0;
-  -webkit-transform: scale(0, 1);
-  -ms-transform: scale(0, 1);
-  transform: scale(0, 1);
-  -webkit-transform-origin: right center;
-  -ms-transform-origin: right center;
-  transform-origin: right center;
-  z-index: -1;
+#mainMenu {
   -webkit-transition: transform 0.5s ease;
   transition: transform 0.5s ease; }
-
-#mainMenu li > a:hover::before,
-#mainMenu li > a.active::before {
-  -webkit-transform: scale(1, 1);
-  -ms-transform: scale(1, 1);
-  transform: scale(1, 1);
-  -webkit-transform-origin: left center;
-  -ms-transform-origin: left center;
-  transform-origin: left center; }
+  #mainMenu li > a {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+    text-decoration: none; }
+  #mainMenu li:not(:last-of-type) {
+    margin-right: 10px; }
 
 .main-header {
   position: fixed;

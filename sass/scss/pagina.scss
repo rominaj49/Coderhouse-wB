@@ -7,7 +7,11 @@
 background: rgb(0, 0, 0);
 }
 
-.jumbotron{
+
+
+
+
+.jumbotron{ /*portada de inicio*/
   font-family: 'Montserrat', sans-serif;
   padding: 210px 0;
   background: url(../../imagenes/portada.jpg) center center;
@@ -17,7 +21,7 @@ background: rgb(0, 0, 0);
   position: relative;
 
 h1 {
-  font-size: 70px;
+  font-size: 60px;
   margin-bottom: 0;
 }
  p {
@@ -27,6 +31,7 @@ h1 {
   margin: 0 0 30px;
 }
 }
+
 
 .button{
   display: inline-block;
@@ -67,7 +72,7 @@ text-decoration: none;
 }
 
 
-/*ICONO FLOTANTE EDITADO, INSTAGRAM arreglar*/
+/*ICONO FLOTANTE EDITADO, INSTAGRAM arreglado*/
 .instagram{
     position:fixed;
     width:60px;
@@ -133,11 +138,6 @@ text-decoration: none;
     width: 100%;
   }
 }
-
-
-
-
-
 
 
 [data-target="#mainMenu"] {
@@ -392,10 +392,11 @@ h1{
 
 
 /*
-* @subsection Shop/////////////////////////////////////////////////LENCERIA////////////////////////////////////////////////////////////////////////
+* @seccion Shop/////////////////////////////////////////////////LENCERIA////////////////////////////////////////////////////////////////////////
 */
+
 .product {
-  padding-top: 5px;
+  padding-top: 0px;
   padding-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
@@ -460,11 +461,10 @@ display: inline-block;
 }
 
 @media (max-width: 1199px) {
-
 .single-product .caption{
   
-    * + .price {
-        margin-left: 7.8%;
+ * + .price {
+  margin-left: 7.8%;
  }
 
   .caption * + .quantity {
@@ -513,7 +513,7 @@ display: inline-block;
 
 @media (max-width: 767px) {
     .product{
-      margin-left: 70px;
+      margin-left: 0px;
     }
   .single-product{
 
@@ -527,8 +527,14 @@ display: inline-block;
 }
 @media (max-width: 490px) {
   .product{
-    margin-left: 50px;
+   margin-left: 0px;
   }
+.jumbotron{
+
+  h1{
+font-size: 40px;
+  }
+}
 }
 .price {
   display: inline-block;
